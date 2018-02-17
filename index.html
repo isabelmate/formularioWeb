@@ -30,7 +30,7 @@
       </div>
 
       <div class="row"> 
-        <div class="col-xs-12 col-md-4 col-md-push-8"> 
+        <div class="col-xs-12 col-sm-4 col-sm-push-8 col-md-4 col-md-push-8"> 
 
           <aside>
 
@@ -147,7 +147,7 @@
 
         </div> 
 
-        <div class="col-xs-12 col-md-7 col-md-pull-4"> 
+        <div class="col-xs-12 col-sm-7 col-sm-pull-4 col-md-7 col-md-pull-4"> 
           <article>
             <header>              
               <div class="row">
@@ -210,7 +210,13 @@
                     <div class="panel-heading">
                       <h4 class="panel-title">       
                         <input type="radio" class="radioPayment" id="cardPayment" name="selectedPayment">
-                        <label for="cardPayment">Tarjeta de crédito</label>    
+                        <label for="cardPayment">Tarjeta de crédito 
+                          <div class="pull-right">
+                            <img src="assets/imgs/visa.jpg" id="visaCard" class="cardIcon"/>
+                            <img src="assets/imgs/mastercard.jpg" id="mastercardCard" class="cardIcon"/>
+                            <img src="assets/imgs/amex.jpg" id="amexCard" class="cardIcon"/> 
+                          </div>
+                        </label>    
                         <a data-toggle="collapse" data-parent="#accordion" href="#card"></a>
                       </h4>
                     </div>
@@ -230,7 +236,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-3 col-md-3">
                           <div class="form-group">
-                            <div class="">
+                            <div class=""><!-- falta clase date -->
                               <label for="expirationDate" class="sr-only">Fecha de caducidad</label>
                               <input type="date" class="form-control" id="expirationDate" name="expirationDate">
                             </div>
@@ -267,14 +273,18 @@
                       </h4>
                     </div>
                     <div id="transfer" class="panel-collapse collapse">
-                      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+                      <div class="panel-body">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                          <p>Deberá realizar transferencia bancaria por <b>1.243,75 EUR</b> a la cuenta del hotel.</p>
+                          <p>Nos debe llegar en un máximo de 10 días. Le enviaremos los datos bancarios en la confirmación por email, una vez terminado el proceso de reserva.</p>                        
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div> 
               
                 <div class="form-group">
-                  <label for="comment">Comentarios:</label>
+                  <label for="comment" class="sr-only">Comentarios:</label>
                   <textarea class="form-control" rows="5" id="comment" placeholder="Comentarios."></textarea>
                 </div>
                 
@@ -299,8 +309,8 @@
                     <a>Cancelar y volver atrás</a>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-6">
-                    <div class="btn btn-primary">
-                      <button type="submit">Realizar la reserva</button>       
+                    <div class="btn btn-primary disabled">
+                      <button type="submit" id="sendFormButton" disabled>Realizar la reserva</button>       
                     </div>
                   </div>
                 </div>
@@ -316,7 +326,7 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="/assets/js/lib/jquery.validate.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/validateForm.js"></script>
   
