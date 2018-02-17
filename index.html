@@ -14,9 +14,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="/assets/js/lib/jquery.validate.min.js"></script>  
+    <link href="assets/css/main.css">   
    
   </head>
 
@@ -37,6 +35,7 @@
           <aside>
 
             <section id="summary">
+              <h1 class="sr-only">Resumen de su estancia y pago</h1>
               
               <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6">
@@ -168,12 +167,12 @@
 
             <div class="formulario">
               <h2>Datos de la reserva</h2>
-              <form id="formPayment" method="post" action novalidate="novalidate">
+              <form id="formPayment" class="form" novalidate="novalidate">
                 <div class="row">
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="form-group">
                       <label for="firstName" class="sr-only">Nombre</label>
-                      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Nombre">
+                      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Nombre" required>
                     </div>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-6">
@@ -209,19 +208,49 @@
                 <div class="panel-group" id="accordion">
                   <div class="panel panel-default">
                     <div class="panel-heading">
-                      <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#card">Tarjeta de crédito</a>
+                      <h4 class="panel-title">       
+                        <input type="radio" class="radioPayment" id="cardPayment" name="selectedPayment">
+                        <label for="cardPayment">Tarjeta de crédito</label>    
+                        <a data-toggle="collapse" data-parent="#accordion" href="#card"></a>
                       </h4>
                     </div>
                     <div id="card" class="panel-collapse collapse in">
-                      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+                      <div class="panel-body">  
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                          <div class="form-group">
+                            <label for="creditCardNumber" class="sr-only">Número de tarjeta de crédito</label>
+                            <input type="text" class="form-control" id="creditCardNumber" name="creditCardNumber" placeholder="Número tarjeta crédito">
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                          <div class="form-group">
+                            <label for="cardName" class="sr-only">Nombre del titular</label>
+                            <input type="text" class="form-control" id="cardName" name="cardName" placeholder="Nombre del titular">
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                          <div class="form-group">
+                            <div class="">
+                              <label for="expirationDate" class="sr-only">Fecha de caducidad</label>
+                              <input type="date" class="form-control" id="expirationDate" name="expirationDate">
+                            </div>
+                          </div>
+                        </div>   
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                          <div class="form-group">
+                            <label for="cvv" class="sr-only">CVV</label>
+                            <input type="text" class="form-control" id="cvv" name="cvv" placeholder="CVV">
+                          </div>
+                        </div>   
+                      </div>
                     </div>
                   </div>
                   <div class="panel panel-default">
                     <div class="panel-heading">
                       <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#paypal">Paypal</a>
+                        <input type="radio" class="radioPayment" id="paypalPayment" name="selectedPayment">
+                        <label for="paypalPayment">Paypal</label> 
+                        <a data-toggle="collapse" data-parent="#accordion" href="#paypal"></a>
                       </h4>
                     </div>
                     <div id="paypal" class="panel-collapse collapse">
@@ -232,7 +261,9 @@
                   <div class="panel panel-default">
                     <div class="panel-heading">
                       <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#transfer">Transferencia Bancaria</a>
+                        <input type="radio" class="radioPayment" id="transferPayment" name="selectedPayment">
+                        <label for="transferPayment">Transferencia Bancaria</label>  
+                        <a data-toggle="collapse" data-parent="#accordion" href="#transfer"></a>
                       </h4>
                     </div>
                     <div id="transfer" class="panel-collapse collapse">
@@ -263,10 +294,17 @@
               </form> 
               
               <footer>
-                <a>Cancelar y volver atrás</a>
-                <div class="button">
-                  <button type="submit">Realizar la reserva</button>       
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                    <a>Cancelar y volver atrás</a>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="btn btn-primary">
+                      <button type="submit">Realizar la reserva</button>       
+                    </div>
+                  </div>
                 </div>
+               
               </footer>
               
             </div>
@@ -276,8 +314,11 @@
     </main>
 
     
-    
-    <script src="/assets/js/validateForm.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/assets/js/lib/jquery.validate.min.js"></script> 
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/validateForm.js"></script>
+  
   </body>
 </html>
