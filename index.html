@@ -15,6 +15,9 @@
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/assets/js/lib/jquery.validate.min.js"></script>  
+   
   </head>
 
   <body>
@@ -153,49 +156,52 @@
                   <img src="assets/imgs/logo-hotel.jpg" alt="Welcome hotel and hostels logo"/>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6">
-                  <p>Welcome - Hotel & Hostel</p>
-                  <p>Gran Vía 44,</p>
-                  <p>Madrid, España</p>
+                  <ul>
+                    <li>Welcome - Hotel & Hostel</li>
+                    <li>Gran Vía 44,</li>
+                    <li>Madrid, España</li>                    
+                  </ul>                 
                 </div>
               </div>              
+              
             </header>
 
             <div class="formulario">
               <h2>Datos de la reserva</h2>
-              <form>
+              <form id="formPayment" method="post" action novalidate="novalidate">
                 <div class="row">
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="form-group">
-                      <label for="first">Nombre</label>
-                      <input type="text" class="form-control" placeholder="Nombre" id="Nombre">
+                      <label for="firstName" class="sr-only">Nombre</label>
+                      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Nombre">
                     </div>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="form-group">
-                      <label for="last">Apellidos</label>
-                      <input type="text" class="form-control" placeholder="Apellidos" id="Apellidos">
+                      <label for="lastName" class="sr-only">Apellidos</label>
+                      <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Apellidos">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="form-group">
-                      <label for="email">Email</label>
-                      <input type="email" class="form-control" id="email" placeholder="Email">
+                      <label for="email" class="sr-only">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                     </div>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="form-group">
-                      <label for="phone">Teléfono móvil</label>
-                      <input type="tel" class="form-control" id="phone" placeholder="Teléfono móvil">
+                      <label for="phone" class="sr-only">Teléfono móvil</label>
+                      <input type="tel" class="form-control" id="phone" name="phone" placeholder="Teléfono móvil">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                      <label for="company">Empresa</label>
-                      <input type="text" class="form-control" placeholder="Empresa (opcional)" id="Empresa">
+                      <label for="company" class="sr-only">Empresa</label>
+                      <input type="text" class="form-control" id="company" placeholder="Empresa (opcional)">
                     </div>
                   </div>
                 </div>             
@@ -240,22 +246,27 @@
                   <label for="comment">Comentarios:</label>
                   <textarea class="form-control" rows="5" id="comment" placeholder="Comentarios."></textarea>
                 </div>
+                
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" value="Sure!" id="newsletter"> Quiero recibir futuras ofertas y noticias del establecimiento
+                  <label for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter"> Quiero recibir futuras ofertas y noticias del establecimiento
                   </label>
                 </div>
+                
                 <hr>
+                
                 <div class="checkbox">
-                  <label>
-                    <input type="checkbox" value="Sure!" id="policy"> Acepto la política de cancelación/pago, política de privacidad y condiciones particulares de la reserva, todas ellas detalladas en esta página.
+                  <label for="acceptPolicy">
+                    <input type="checkbox" id="acceptPolicy" name="acceptPolicy"> Acepto la política de cancelación/pago, política de privacidad y condiciones particulares de la reserva, todas ellas detalladas en esta página.
                   </label>
                 </div>
               </form> 
               
               <footer>
                 <a>Cancelar y volver atrás</a>
-                <button>Realizar la reserva</button>                
+                <div class="button">
+                  <button type="submit">Realizar la reserva</button>       
+                </div>
               </footer>
               
             </div>
@@ -264,8 +275,9 @@
       </div> 
     </main>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    
+    <script src="/assets/js/validateForm.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </body>
 </html>
