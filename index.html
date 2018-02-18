@@ -12,9 +12,8 @@
 
     <title>Formulario de pago</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/main.css">   
+    <link href="/assets/css/main.css" rel="stylesheet">   
    
   </head>
 
@@ -22,51 +21,47 @@
 
     <main class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-5 col-sm-push-7 col-md-4 col-md-push-8">
-          <p class="small">Ahora está en una página segura
-            <img src="assets/imgs/geotrust.jpg" alt="Geotrust logo">
-          </p>
+        <div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-5 col-md-push-7">
+          <p>Ahora está en una página segura <img src="assets/imgs/geotrust.jpg" alt="Geotrust logo"></p>         
         </div>
       </div>
 
       <div class="row"> 
-        <div class="col-xs-12 col-sm-4 col-sm-push-8 col-md-4 col-md-push-8"> 
+        <div class="col-xs-12 col-sm-5 col-sm-push-7 col-md-5 col-md-push-7"> 
 
-          <aside>
+          <aside class="reservation">
 
-            <section id="summary">
+            <section class="summary">
               <h1 class="sr-only">Resumen de su estancia y pago</h1>
               
               <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-6">
                   <p>Entrada</p>
-                  <p>jue, 19-oct-2017</p>
+                  <p class="dates">jue, 19-oct-2017</p>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6">
                   <p>Salida</p>
-                  <p>jue, 23-oct-2017</p>
+                  <p class="dates">jue, 23-oct-2017</p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                  <p>Estancia de 3 noches</p>
+                  <p>Estancia de <b>3 noches</b></p>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                  <p class="lead">Total a pagar</p>
+                  <p>Total a pagar</p>
                   <p>1.243,75 EUR</p>
                   <p>Impuestos incluidos</p>   
-                  <div class="legalprice">
-                    <p>El pago se realizará en la moneda del hotel (el tipo del cambio puede variar): Tipo de cambio de hoy: 1.474,13 USD = 1.243,75 EUR. La entidad emisora de tu tarjeta podría cargarte una comisión por el cambio de tu moneda.</p>
+                  <div class="legal">
+                    <i>El pago se realizará en la moneda del hotel (el tipo del cambio puede variar): Tipo de cambio de hoy: 1.474,13 USD = 1.243,75 EUR. La entidad emisora de tu tarjeta podría cargarte una comisión por el cambio de tu moneda.</i>
                   </div>
                 </div>              
               </div>  
               
             </section>
 
-            <hr>
-
-            <section id="room">
+            <section class="room">
 
               <div class="basics">
                 <div class="row">
@@ -74,23 +69,23 @@
                     <img src="assets/imgs/suiteThumbnail.jpg">                
                   </div>
                   <div class="col-xs-12 col-sm-8 col-md-7">
-                    <p>1 hab. de tipo:</p>
-                    <p>Suite Presidencial</p>
+                    <p><b>1 hab.</b> de tipo:</p>
+                    <b>Suite Presidencial</b>
                     <p>2 personas</p>
                   </div>              
                 </div>
                 
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 col-md-12">
-                    <p>4 noches con 15% de descuento</p>
+                    <b>4 noches con 15% de descuento</b>
                     <ul class="list-group">
                       <li class="list-group-item">jue, 19 oct</li>
                       <li class="list-group-item">vie, 20 oct</li>
                       <li class="list-group-item">sab, 21 oct</li>
                       <li class="list-group-item">dom, 22 oct</li>
                     </ul>
-                    <p>Restricciones: Estancia mínima: 4 noches</p>
-                    <p>Incluido en estos días:</p>
+                    <p><b>Restricciones:</b> Estancia mínima: 4 noches</p>
+                    <b>Incluido en estos días:</b>
                     <ul class="includedRoom">
                       <li>Parking gratuito</li>
                       <li>Botella de agua diaria en la habitación</li>
@@ -104,7 +99,7 @@
               <div class="extraCharges">
                 <div class="row">
                   <div class="col-xs-12 col-sm-8 col-md-8">
-                    <p>Paquete Romántico</p>
+                    <b>Paquete Romántico</b>
                     <p>Para 1 habitación</p>
                   </div>
                   <div class="col-xs-12 col-sm-4 col-md-4">
@@ -117,7 +112,7 @@
 
                 <div class="row">
                   <div class="col-xs-12 col-sm-8 col-md-8">
-                    <p>Garaje</p>
+                    <b>Garaje</b>
                     <p>Para 1 habitación</p>
                   </div>
                   <div class="col-xs-12 col-sm-4 col-md-4">
@@ -131,13 +126,13 @@
 
             </section>
             
-            <section id="policies">
+            <section class="policies legal">
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                  <p>Pago: Prepago de 100%: Con tarjeta de crédito</p>
+                  <p><b>Pago:</b> Prepago de 100%: Con tarjeta de crédito</p>
                   <p>Cancelación: Anulación restringida.</p>
                   <p>El hotel cuando reciba la reserva, cobrará en su tarjeta la totalidad del importe. No se admite devolución en caso de anuilación, salida anticipada o no presentarse (la reserva sólo se mantendrá la primera noche). Si el pago fuera denegado, el hotel anularía su reserva. Atención: las reservas de 5 o más habitaciones están sujetas a condiciones especiales y a un suplemento. Una vez efectuada la reserva, el hotel se pondrá en contacto con los huéspedes para proporcionarles más información. (basado en la hora local del hotel)</p>
-                  <p>Privacidad: Solo usamos sus datos personales para temas relacionados con su reserva. <a>Leer política de privacidad</a></p>
+                  <p><b>Privacidad:</b> Solo usamos sus datos personales para temas relacionados con su reserva. <a>Leer política de privacidad</a></p>
                 </div>
               </div>
                           
@@ -147,7 +142,7 @@
 
         </div> 
 
-        <div class="col-xs-12 col-sm-7 col-sm-pull-4 col-md-7 col-md-pull-4"> 
+        <div class="col-xs-12 col-sm-6 col-sm-pull-5 col-md-6 col-md-pull-5"> 
           <article>
             <header>              
               <div class="row">
@@ -156,7 +151,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6">
                   <ul>
-                    <li>Welcome - Hotel & Hostel</li>
+                    <li><b>Welcome - Hotel & Hostel</b></li>
                     <li>Gran Vía 44,</li>
                     <li>Madrid, España</li>                    
                   </ul>                 
@@ -165,7 +160,7 @@
               
             </header>
 
-            <div class="formulario">
+            <div class="form">
               <h2>Datos de la reserva</h2>
               <form id="formPayment" class="form" novalidate="novalidate">
                 <div class="row">
