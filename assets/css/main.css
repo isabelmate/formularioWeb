@@ -235,8 +235,21 @@ i{
   font-style: italic;
 }
 
+
+
+/************************** MODIFICATIONS
+**************************/
+
+
+
+
 small{
-  font-size: 85%;
+  font-size: 70%;
+  color:#97A0A4;  
+}
+big{
+  font-size:110%;
+  padding-bottom: 5px;
 }
 
 hr {
@@ -248,16 +261,16 @@ hr {
   background: #ececec;
 }
 
-
-
-
-/************************** BS MODIFICATION
-**************************/
-
+p{
+  font-size: 14px;
+  padding-bottom: 5px;
+  color:#97A0A4;  
+  font-family: "HelveticaNeue";
+}
 
 
 .container{
-  padding: 0;
+  padding: 20px 0;
 }
 
 
@@ -272,15 +285,76 @@ hr {
 
 
 @font-face {
-  font-family: MiraiIcons;
-  src: url(fonts/Mirai-IcoFont.eot);
-  src: url(fonts/Mirai-IcoFont.eot#iefix) format('embedded-opentype'),
-       url(fonts/Mirai-IcoFont.woff) format('woff'),
-       url(fonts/Mirai-IcoFont.ttf) format('truetype'),
-       url(fonts/Mirai-IcoFont.svg) format('svg');  
+  font-family: "Mirai";
+  src: url("../fonts/Mirai-IcoFont.eot");
+  src: url("../fonts/Mirai-IcoFont.eot#iefix") format("embedded-opentype"),
+       url("../fonts/Mirai-IcoFont.woff") format("woff"),
+       url("../fonts/Mirai-IcoFont.ttf") format("truetype"),
+       url("../fonts/Mirai-IcoFont.svg") format("svg");  
   font-weight: 100;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../fonts/HelveticaNeue.otf") format("otf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeueLight";
+  src: url("../fonts/HelveticaNeue-Light.otf") format("otf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+
+
+[class^="icon-"]:before, [class*=" icon-"]:before{
+  font-family: "Mirai";
+  font-style: normal;
+  font-weight: normal;
+  display:inline-block;
+  text-decoration: inherit;
+  speak:none;
+  text-align:center;
+}
+
+
+[data-icon]:before {
+    font-family: "Mirai";
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icon-calendar:before {
+  content: '\e900';
+}
+.icon-arrow-range-date:before {
+  content: '\e901';
+}
+.icon-arrow-right:before {
+  content: '\e902';
+}
+.icon-arrow-left:before {
+  content: '\e903';
+}
+.icon-info:before {
+  content: '\e904';
+}
+.icon-answer:before {
+  content: '\e905';
+}
+.icon-lock:before {
+  content: '\e906';
+}
+
+
+
 
 
 
@@ -290,45 +364,151 @@ hr {
 
 
 
+
+
+.black{
+  color:#2B3539;
+}
+
+.title{
+  color:#2B3539;
+  font-size: 120%;
+}
+
+.secure:before{
+  font-family: "Mirai";
+  font-size: 30px;
+  content: '\e906';
+}
+
+.secure{
+  color:#B9B9B9;
+  float: right;
+}
+
+.secure img{
+  float:right;
+}
+
 .reservation{
   background-color: #F9F9F9;
-  border: 1px solid #E9E9E9;
- 
+  border: 1px solid #E9E9E9; 
 }
 
 .summary{
-  padding: 35px 25px;
+  padding: 35px 25px 25px 25px ;
   border-bottom:1px solid #ececec;
 }
 
-.summary p{
-  font-size: 14px;
-  color:#97A0A4;
-}
 .summary p.dates{
   font-size: 16px;
   color:#404040;
 }
 
-.legal{
-  font-size: 80%;  
+.summary .price{
+  padding: 25px 0;
+}
+
+.summary .price p:nth-child(2){
+  font-size: 24px;
+  font-weight: bold;
+  color:#87C190;  
+}
+
+.summary .change{
+  padding-top: 30px;
 }
 
 .room{
-  padding: 35px 25px;
+  padding: 25px 25px;
   border-bottom:1px solid #ececec;  
 }
 
-.basics{}
+.basics .row:nth-child(1){
+  padding-bottom: 20px;
+}
 
-.extraCharges{}
+.basics img{
+  border:5px solid #fff;
+  border-radius: 2px;
+  width: 90px;
+  float: left;
+  margin-right: 15px;
+}
+
+.basics .datesList{
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  max-height: 128px;
+  overflow-y: scroll;
+  font-size: 12px;
+  color:#2B3539;
+}
+
+.basics .datesList li{
+  border: none;
+  padding: 10px 0 10px 5px;
+}
+
+.basics .datesList li:before{
+  font-family: "Mirai";
+  font-size: 18px;
+  content: "\e900";
+}
+
+.basics .datesList li:nth-child(2),
+.basics .datesList li:nth-child(4){
+  background-color: #F9F9F9;
+}
+
+.basics .datesList li span{
+  font-size: 11px;
+}
+
+
+.basics .row:nth-child(2){
+  font-size: 12px;
+}
+
+.basics .info{
+  padding-left: 10px;
+}
+
+.basics .info p, .basics .info ul{
+  font-size: 12px; 
+}
+
+.basics .info ul li{
+  padding: 0 0 5px 5px;  
+}
+
+.basics .info ul li:before{
+  font-family: 'Glyphicons Halflings';
+  font-size: 10px;
+  padding-right: 5px;
+  color:#373F44;
+  content: "\e013";
+}
+
+.extraCharges p:first-child{
+  font-weight: bold;
+  color:#373F44;
+}
+
+.extraCharges div:nth-child(2){
+  text-align: right;
+  color:#97A0A4;
+}
 
 .policies{
   padding: 35px 25px; 
 }
 
-
-
-
+.policies ul li{
+  font-size: 75%;
+  line-height: 14px;
+  padding-bottom: 25px; 
+  color:#97A0A4;
+}
 
 

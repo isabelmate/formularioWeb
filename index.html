@@ -22,7 +22,12 @@
     <main class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-5 col-md-push-7">
-          <p>Ahora está en una página segura <img src="assets/imgs/geotrust.jpg" alt="Geotrust logo"></p>         
+          <div class="secure">
+            <small>
+<!--              <span class="icon-lock"></span>-->
+              Ahora está en una página segura</small>
+            <img src="assets/imgs/geotrust.jpg" alt="Geotrust logo" />
+          </div>
         </div>
       </div>
 
@@ -35,27 +40,31 @@
               <h1 class="sr-only">Resumen de su estancia y pago</h1>
               
               <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="col-xs-5 col-sm-5 col-md-5">
                   <p>Entrada</p>
                   <p class="dates">jue, 19-oct-2017</p>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="col-xs-1 col-sm-1 col-md-1">
+                  <span class="icon-arrow-range-date"></span>
+                </div>
+                <div class="col-xs-5 col-sm-5 col-md-5">
                   <p>Salida</p>
-                  <p class="dates">jue, 23-oct-2017</p>
+                  <p class="dates">lun, 23-oct-2017</p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                  <p>Estancia de <b>3 noches</b></p>
+                  <small>Estancia de 3 noches</small>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                  <p>Total a pagar</p>
-                  <p>1.243,75 EUR</p>
-                  <p>Impuestos incluidos</p>   
-                  <div class="legal">
-                    <i>El pago se realizará en la moneda del hotel (el tipo del cambio puede variar): Tipo de cambio de hoy: 1.474,13 USD = 1.243,75 EUR. La entidad emisora de tu tarjeta podría cargarte una comisión por el cambio de tu moneda.</i>
+                  <div class="price">
+                    <big>Total a pagar</big>
+                    <p>1.243,75 EUR</p>
+                    <p>Impuestos incluidos</p>  
                   </div>
+
+                  <small><i>El pago se realizará en la moneda del hotel (el tipo del cambio puede variar): Tipo de cambio de hoy: 1.474,13 USD = 1.243,75 EUR. La entidad emisora de tu tarjeta podría cargarte una comisión por el cambio de moneda.</i></small>
                 </div>              
               </div>  
               
@@ -65,31 +74,35 @@
 
               <div class="basics">
                 <div class="row">
-                  <div class="col-xs-12 col-sm-4 col-md-5">               
-                    <img src="assets/imgs/suiteThumbnail.jpg">                
-                  </div>
-                  <div class="col-xs-12 col-sm-8 col-md-7">
+                  <div class="col-xs-12 col-sm-12 col-md-12">  
+                    <img src="assets/imgs/suiteThumbnail.jpg" alt="Suite presidencial">   
                     <p><b>1 hab.</b> de tipo:</p>
-                    <b>Suite Presidencial</b>
+                    <p class="title">Suite Presidencial</p>
                     <p>2 personas</p>
                   </div>              
                 </div>
                 
                 <div class="row">
-                  <div class="col-xs-12 col-sm-12 col-md-12">
-                    <b>4 noches con 15% de descuento</b>
-                    <ul class="list-group">
-                      <li class="list-group-item">jue, 19 oct</li>
-                      <li class="list-group-item">vie, 20 oct</li>
-                      <li class="list-group-item">sab, 21 oct</li>
-                      <li class="list-group-item">dom, 22 oct</li>
+                  <div class="col-xs-12 col-sm-12 col-md-12">    
+                    <p class="black">4 noches con 15% de descuento</p>
+                    <ul class="list-group datesList"> 
+                      <li class="list-group-item">
+                        jue, 19 oct 2017 <span>256,90 EUR</span> Desayuno buffet incluido</li>
+                      <li class="list-group-item">
+                        vie, 20 oct 2017 <span>236,90 EUR</span> Desayuno buffet incluido</li>
+                      <li class="list-group-item">
+                        sab, 21 oct 2017 <span>246,90 EUR</span> Desayuno buffet incluido</li>
+                      <li class="list-group-item">
+                        dom, 22 oct 2017 <span>256,90 EUR</span> Desayuno buffet incluido</li>
                     </ul>
-                    <p><b>Restricciones:</b> Estancia mínima: 4 noches</p>
-                    <b>Incluido en estos días:</b>
-                    <ul class="includedRoom">
-                      <li>Parking gratuito</li>
-                      <li>Botella de agua diaria en la habitación</li>
-                    </ul> 
+                    <div class="info">
+                      <p><span class="black">Restricciones:</span> Estancia mínima: 4 noches</p>
+                      <p><span class="black">Incluido en estos días:</span></p>
+                      <ul>
+                        <li>Parking gratuito</li>
+                        <li>Botella de agua diaria en la habitación</li>
+                      </ul> 
+                    </div>
                   </div>
                 </div>
               </div>
@@ -98,12 +111,12 @@
 
               <div class="extraCharges">
                 <div class="row">
-                  <div class="col-xs-12 col-sm-8 col-md-8">
-                    <b>Paquete Romántico</b>
+                  <div class="col-xs-8 col-sm-8 col-md-8">
+                    <p>Paquete Romántico</p>
                     <p>Para 1 habitación</p>
                   </div>
-                  <div class="col-xs-12 col-sm-4 col-md-4">
-                    <p>18,00 EUR</p>
+                  <div class="col-xs-4 col-sm-4 col-md-4">
+                    <b>18,00 EUR</b>
                     <p>por noche</p>                    
                   </div>
                 </div>
@@ -111,12 +124,12 @@
                 <hr>
 
                 <div class="row">
-                  <div class="col-xs-12 col-sm-8 col-md-8">
-                    <b>Garaje</b>
-                    <p>Para 1 habitación</p>
+                  <div class="col-xs-8 col-sm-8 col-md-8">
+                    <p>Garaje</p>
+                    <p>Para 1 habitación. Para 5 noches</p>
                   </div>
-                  <div class="col-xs-12 col-sm-4 col-md-4">
-                    <p>18,00 EUR</p>
+                  <div class="col-xs-4 col-sm-4 col-md-4">
+                    <b>12,00 EUR</b>
                     <p>por noche</p>                    
                   </div>
                 </div>  
@@ -126,13 +139,14 @@
 
             </section>
             
-            <section class="policies legal">
+            <section class="policies">
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                  <p><b>Pago:</b> Prepago de 100%: Con tarjeta de crédito</p>
-                  <p>Cancelación: Anulación restringida.</p>
-                  <p>El hotel cuando reciba la reserva, cobrará en su tarjeta la totalidad del importe. No se admite devolución en caso de anuilación, salida anticipada o no presentarse (la reserva sólo se mantendrá la primera noche). Si el pago fuera denegado, el hotel anularía su reserva. Atención: las reservas de 5 o más habitaciones están sujetas a condiciones especiales y a un suplemento. Una vez efectuada la reserva, el hotel se pondrá en contacto con los huéspedes para proporcionarles más información. (basado en la hora local del hotel)</p>
-                  <p><b>Privacidad:</b> Solo usamos sus datos personales para temas relacionados con su reserva. <a>Leer política de privacidad</a></p>
+                  <ul>
+                  <li><b>Pago:</b> Prepago de 100%: Con tarjeta de crédito</li>
+                  <li><b>Cancelación:</b> Anulación restringida.<br>El hotel cuando reciba la reserva, cobrará en su tarjeta la totalidad del importe. No se admite devolución en caso de anuilación, salida anticipada o no presentarse (la reserva sólo se mantendrá la primera noche). Si el pago fuera denegado, el hotel anularía su reserva. Atención: las reservas de 5 o más habitaciones están sujetas a condiciones especiales y a un suplemento. Una vez efectuada la reserva, el hotel se pondrá en contacto con los huéspedes para proporcionarles más información. (basado en la hora local del hotel)</li>
+                  <li><b>Privacidad:</b> Solo usamos sus datos personales para temas relacionados con su reserva. <a>Leer política de privacidad</a></li>
+                  </ul>
                 </div>
               </div>
                           
@@ -150,7 +164,7 @@
                   <img src="assets/imgs/logo-hotel.jpg" alt="Welcome hotel and hostels logo"/>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6">
-                  <ul>
+                  <ul  class="pull-right">
                     <li><b>Welcome - Hotel & Hostel</b></li>
                     <li>Gran Vía 44,</li>
                     <li>Madrid, España</li>                    
@@ -271,7 +285,7 @@
                       <div class="panel-body">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                           <p>Deberá realizar transferencia bancaria por <b>1.243,75 EUR</b> a la cuenta del hotel.</p>
-                          <p>Nos debe llegar en un máximo de 10 días. Le enviaremos los datos bancarios en la confirmación por email, una vez terminado el proceso de reserva.</p>                        
+                          <p>Nos debe llegar en un máximo de 10 días. Le enviaremos los datos bancarios en la confirmación por email, una vez terminado el proceso de reserva.</p> 
                         </div>
                       </div>
                     </div>
@@ -301,15 +315,14 @@
               <footer>
                 <div class="row">
                   <div class="col-xs-12 col-sm-6 col-md-6">
-                    <a>Cancelar y volver atrás</a>
+                    <a><span class="icon-arrow-left"></span>Cancelar y volver atrás</a>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="btn btn-primary disabled">
-                      <button type="submit" id="sendFormButton" disabled>Realizar la reserva</button>       
+                      <button type="submit" id="sendFormButton" disabled>Realizar la reserva<span class="icon-arrow-right"></span> </button>       
                     </div>
                   </div>
-                </div>
-               
+                </div>               
               </footer>
               
             </div>
