@@ -241,12 +241,15 @@ i{
 **************************/
 
 
-
+a{
+  color:#2A3D50;
+}
 
 small{
   font-size: 70%;
   color:#97A0A4;  
 }
+
 big{
   font-size:110%;
   padding-bottom: 5px;
@@ -268,11 +271,91 @@ p{
   font-family: "HelveticaNeue";
 }
 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"]
+{
+  font-size: 12px;
+  padding: 20px 15px;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  margin: 0;
+}
+
+button{
+  font-size: 16px;
+  padding: 5px;
+}
+
+div.disabled, div.disabled button{
+  background-color: #C3C3C3;
+}
+
+
+
 
 .container{
   padding: 20px 0;
 }
 
+.panel-group .panel+.panel{
+  margin: 0;
+}
+
+.panel-default > .panel-heading{
+  background-color: #fff; 
+  border: none;
+}
+
+.panel-body{
+  padding: 15px 0 0;
+  background-color: #FAFAFA;
+}
+
+
+
+
+/************************** TRANSITIONS
+**************************/
+
+
+
+::-webkit-input-placeholder       {
+	opacity: 1; 
+	transition: opacity .3s ease;
+}
+::-moz-placeholder                {
+	opacity: 1; 
+	transition: opacity .3s ease;
+}
+:-moz-placeholder                 {
+	opacity: 1; 
+	transition: opacity .3s ease;
+}
+:-ms-input-placeholder            {
+	opacity: 1; 
+	transition: opacity .3s ease;
+}
+
+:focus::-webkit-input-placeholder {
+	opacity: 0; 
+	transition: opacity .3s ease;
+}
+:focus::-moz-placeholder          {
+	opacity: 0; 
+	transition: opacity .3s ease;
+}
+:focus:-moz-placeholder           {
+	opacity: 0; 
+	transition: opacity .3s ease;
+}
+:focus:-ms-input-placeholder      {
+	opacity: 0; 
+	transition: opacity .3s ease;
+}
 
 
 
@@ -322,6 +405,24 @@ p{
   text-align:center;
 }
 
+
+
+/*https://css-tricks.com/tips-aligning-icons-text/*/
+
+.icon {
+  position: relative;
+  /* Adjust these values accordingly */
+  top: 5px;
+  left: 5px;
+}
+[class^="icon"] {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 0;
+  margin-right: 5px;
+  fill: #fff;
+}
 
 [data-icon]:before {
     font-family: "Mirai";
@@ -375,19 +476,29 @@ p{
   font-size: 120%;
 }
 
+/*
 .secure:before{
   font-family: "Mirai";
   font-size: 30px;
   content: '\e906';
 }
+*/
+
+.secure span{
+  font-size: 30px;
+  color: #E2E2E2;
+  top:5px;
+}
 
 .secure{
   color:#B9B9B9;
   float: right;
+
 }
 
 .secure img{
   float:right;
+  width: 90px;
 }
 
 .reservation{
@@ -398,6 +509,18 @@ p{
 .summary{
   padding: 35px 25px 25px 25px ;
   border-bottom:1px solid #ececec;
+}
+
+
+.summary span{
+  font-size: 40px;
+  color: #CACACA;
+  top:5px;
+  right: 20px;
+}
+
+.summary .icon-arrow-range-date{
+  
 }
 
 .summary p.dates{
@@ -512,3 +635,122 @@ p{
 }
 
 
+/**** *****/
+
+
+
+.reservationData header img{
+  width:150px;
+}
+
+.reservationData header ul{
+  font-size: 12px;
+  color:#97A0A4;
+}
+
+.reservationData header{
+  padding-bottom: 25px;
+}
+  
+.center-table {
+  float: right;
+  display: table;
+  height: 80px;
+  width: 160px;
+  padding: 5px;
+}
+
+.center-table ul {
+  display: table-cell;
+  margin: 0;
+  vertical-align: middle;
+}
+
+
+.reservationData form{
+  padding:25px 0;
+}
+
+
+.reservationData .panel-group label{
+  font-size: 12px;
+  color:#2B3539;
+  line-height: 14px;
+}
+
+.reservationData .panel-group p{
+  font-size: 12px;
+}
+
+.reservationData .input-group >input{
+  border-right: 0;  
+}
+
+.reservationData .input-group .form-control {
+  box-shadow: none;
+  webkit-box-shadow: none;
+}
+
+.reservationData .input-group > .input-group-addon{
+  font-size: 22px;
+  padding: 0;
+  color:#E2E2E2;
+  background-color: #fff;
+  border-left: 0px;
+}
+
+.reservationData .panel-group .cardImages img{
+  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%);
+  margin: 0;
+}
+
+.reservationData .panel-group .cardImages img.selected{
+  filter: grayscale(0%);
+  border: 1px solid blue;
+}
+
+.reservationData .panel-default:last-child .cardImages img{
+  -webkit-filter: grayscale(0%); 
+  filter: grayscale(0%);
+}
+
+.reservationData .panel-default:last-child .panel-body p:first-child{
+  padding-bottom: 10px;
+}
+
+.reservationData .panel-default:last-child .panel-body span{
+  font-size: 50px;
+  text-align: center;
+}
+
+.reservationData .panel-default:last-child .panel-body span:first-child{
+  left: 30px;
+}
+.reservationData .panel-default:last-child .panel-body span:last-child{
+  top: 20px;
+  right: 30px;
+  transform: rotate(180deg);
+}
+
+.reservationData .panel-default:last-child .panel-body span:last-child:before{
+  transform: rotate(180deg);
+}
+
+.reservationData textarea{
+  resize: none;
+}
+
+.reservationData textarea::placeholder{
+  font-size: 12px;
+}
+
+.reservationData .checkbox label{
+  font-size: 12px;
+  color:#97A0A4;
+}
+
+.reservationData footer a{
+  display: inline-block;
+ padding-top: 10px;
+}
