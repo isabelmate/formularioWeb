@@ -28,6 +28,17 @@ $("#formPayment").validate({
       required:true,
       creditcard:true
     },
+    cardName:{
+      required:true,
+      lettersonly: true,
+    },
+    expirationDate:{
+      required:true
+    },
+    cvv:{
+      required:true,
+      number: true
+    },
     acceptPolicy: "required"
   },
   messages: {      
@@ -57,6 +68,17 @@ $("#formPayment").validate({
       required:"Por favor introduzca un número de tarjeta.",
       creditcard:"Por favor introduzca un número de tarjeta correcto."
     },
+     cardName:{
+      required:"Por favor introduzca un nombre.",
+      lettersonly: true,
+    },
+    expirationDate:{
+      required:"Introduzca fecha.",
+    },
+    cvv:{
+      required:"Introduzca cvv.",
+      number: true
+    },    
     acceptPolicy: "Por favor, acepta las condiciones del servicio."
   }
 
