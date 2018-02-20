@@ -179,7 +179,7 @@
             </header>
            
               <h2>Datos de la reserva</h2>
-              <form id="formPayment" class="form" novalidate="novalidate">
+              <form id="formPayment" class="form" novalidate="novalidate" >
                 <div class="row">
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="form-group">
@@ -342,20 +342,15 @@
                     <input type="checkbox" id="acceptPolicy" name="acceptPolicy"> Acepto la política de <a>cancelación/pago</a>, <a>política de privacidad</a> y condiciones particulares de la reserva, todas ellas detalladas en esta página.
                   </label>
                 </div>
+
+                <div class="buttonsForm">                 
+                  <a id="buttonBack"><span class="icon-arrow-left"></span>Cancelar y volver atrás</a>                
+                  <div class="btn btn-primary disabled pull-right">
+                    <input type="submit" id="sendFormButton" disabled value="Realizar la reserva">                    <span class="icon-arrow-right"></span>      
+                  </div>                 
+                </div> 
+                
               </form> 
-              
-              <footer>
-                <div class="row">
-                  <div class="col-xs-12 col-sm-6 col-md-6">             
-                    <a id="buttonBack"><span class="icon-arrow-left"></span>Cancelar y volver atrás</a>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-6">                    
-                    <div class="btn btn-primary disabled pull-right">
-                      <button type="submit" id="sendFormButton" disabled>Realizar la reserva<span class="icon-arrow-right"></span> </button>       
-                    </div>
-                  </div>
-                </div>               
-              </footer>
               
           </article>
           

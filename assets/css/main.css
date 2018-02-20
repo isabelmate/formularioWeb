@@ -253,6 +253,7 @@ small{
 big{
   font-size:110%;
   padding-bottom: 5px;
+
 }
 
 hr {
@@ -287,18 +288,23 @@ input[type=radio] {
 
 button{
   font-size: 16px;
-  padding: 5px;
+  background-color: #8AC5D3;
+  border:0;
 }
 
 div.disabled, div.disabled button{
   background-color: #C3C3C3;
+  border: 1px solid #C3C3C3;
 }
 
+
+/************************** BOOSTRAP MODIFICATIONS
+**************************/
 
 
 
 .container{
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .panel-group .panel+.panel{
@@ -311,8 +317,26 @@ div.disabled, div.disabled button{
 }
 
 .panel-body{
-  padding: 15px 0 0;
+  padding: 0;
   background-color: #FAFAFA;
+}
+
+
+.btn, .btn-primary{
+  padding: 10px 15px;
+  background-color: #8AC5D3;
+  border:1px solid #8AC5D3;
+}
+
+
+.btn-primary:hover {
+  background-color: #82BCCA;
+  border-color:#82BCCA;
+}
+
+
+.btn-primary.disabled:hover{
+  background-color: #C3C3C3;
 }
 
 
@@ -323,36 +347,36 @@ div.disabled, div.disabled button{
 
 
 
-::-webkit-input-placeholder       {
+::-webkit-input-placeholder{
 	opacity: 1; 
 	transition: opacity .3s ease;
 }
-::-moz-placeholder                {
+::-moz-placeholder{
 	opacity: 1; 
 	transition: opacity .3s ease;
 }
-:-moz-placeholder                 {
+:-moz-placeholder{
 	opacity: 1; 
 	transition: opacity .3s ease;
 }
-:-ms-input-placeholder            {
+:-ms-input-placeholder{
 	opacity: 1; 
 	transition: opacity .3s ease;
 }
 
-:focus::-webkit-input-placeholder {
+:focus::-webkit-input-placeholder{
 	opacity: 0; 
 	transition: opacity .3s ease;
 }
-:focus::-moz-placeholder          {
+:focus::-moz-placeholder{
 	opacity: 0; 
 	transition: opacity .3s ease;
 }
-:focus:-moz-placeholder           {
+:focus:-moz-placeholder{
 	opacity: 0; 
 	transition: opacity .3s ease;
 }
-:focus:-ms-input-placeholder      {
+:focus:-ms-input-placeholder{
 	opacity: 0; 
 	transition: opacity .3s ease;
 }
@@ -388,9 +412,21 @@ div.disabled, div.disabled button{
 @font-face {
   font-family: "HelveticaNeueLight";
   src: url("../fonts/HelveticaNeue-Light.otf") format("otf");
+  src: url("../fonts/HelveticaNeueLight.ttf") format("ttf");
+  src: url("../fonts/HelveticaNeue-Light.woff") format("woff");
   font-weight: 100;
   font-style: normal;
 }
+
+
+
+
+
+
+/************************** STYLES
+**************************/
+
+
 
 
 
@@ -406,12 +442,8 @@ div.disabled, div.disabled button{
 }
 
 
-
-/*https://css-tricks.com/tips-aligning-icons-text/*/
-
 .icon {
   position: relative;
-  /* Adjust these values accordingly */
   top: 5px;
   left: 5px;
 }
@@ -419,7 +451,7 @@ div.disabled, div.disabled button{
   width: 50px;
   height: 50px;
   position: relative;
-  top: 0;
+  top: 2px;
   margin-right: 5px;
   fill: #fff;
 }
@@ -454,19 +486,6 @@ div.disabled, div.disabled button{
   content: '\e906';
 }
 
-
-
-
-
-
-/************************** STYLES
-**************************/
-
-
-
-
-
-
 .black{
   color:#2B3539;
 }
@@ -476,6 +495,10 @@ div.disabled, div.disabled button{
   font-size: 120%;
 }
 
+
+/************************** ASIDE
+**************************/
+
 /*
 .secure:before{
   font-family: "Mirai";
@@ -484,6 +507,7 @@ div.disabled, div.disabled button{
 }
 */
 
+
 .secure span{
   font-size: 30px;
   color: #E2E2E2;
@@ -491,9 +515,13 @@ div.disabled, div.disabled button{
 }
 
 .secure{
+  padding: 20px 0;
   color:#B9B9B9;
   float: right;
+}
 
+.secure small{
+  padding-right: 20px;
 }
 
 .secure img{
@@ -511,7 +539,6 @@ div.disabled, div.disabled button{
   border-bottom:1px solid #ececec;
 }
 
-
 .summary span{
   font-size: 40px;
   color: #CACACA;
@@ -519,8 +546,14 @@ div.disabled, div.disabled button{
   right: 20px;
 }
 
-.summary .icon-arrow-range-date{
-  
+
+.summary small:first-child:before{
+  font-size: 20px;
+  font-family: "Mirai";
+  color: #B9B9B9;
+  content: '\e904';
+  position: relative;
+  top: 4px;
 }
 
 .summary p.dates{
@@ -533,6 +566,7 @@ div.disabled, div.disabled button{
 }
 
 .summary .price p:nth-child(2){
+  margin-top: 10px;
   font-size: 24px;
   font-weight: bold;
   color:#87C190;  
@@ -575,7 +609,10 @@ div.disabled, div.disabled button{
 
 .basics .datesList li:before{
   font-family: "Mirai";
-  font-size: 18px;
+  color:#E2E2E2;
+  font-size: 20px;
+  position: relative;
+  top: 4px;
   content: "\e900";
 }
 
@@ -614,8 +651,8 @@ div.disabled, div.disabled button{
 }
 
 .extraCharges p:first-child{
-  font-weight: bold;
-  color:#373F44;
+  font-size: 14px;
+  color:#2B3539;
 }
 
 .extraCharges div:nth-child(2){
@@ -635,8 +672,8 @@ div.disabled, div.disabled button{
 }
 
 
-/**** *****/
-
+/************************** FORM
+**************************/
 
 
 .reservationData header img{
@@ -672,6 +709,29 @@ div.disabled, div.disabled button{
 }
 
 
+
+
+.reservationData input.error{
+  border:2px solid #E04646;
+}
+
+.reservationData .input-group input.error .input-group-addon{
+  border:2px solid #E04646;
+}
+
+.reservationData label.error{
+  font-size: 12px;
+  padding-left: 5px;
+  color:#E04646;
+}
+
+.reservationData .input-group label.error, .reservationData .form-group label.error{
+  font-size: 12px;
+  padding-left: 5px;
+  color:#E04646;
+}
+
+
 .reservationData .panel-group label{
   font-size: 12px;
   color:#2B3539;
@@ -699,6 +759,22 @@ div.disabled, div.disabled button{
   border-left: 0px;
 }
 
+
+.reservationData .panel-default:first-child .panel-title label{
+  line-height: 28px;
+}
+.reservationData .panel-default:last-child .panel-title label{
+  line-height: 28px;
+}
+
+.reservationData .panel-default:first-child .panel-body{
+  padding-top: 15px;
+}
+.reservationData .panel-default:last-child .panel-body{
+  padding-bottom: 15px;
+}
+
+
 .reservationData .panel-group .cardImages img{
   -webkit-filter: grayscale(100%); 
   filter: grayscale(100%);
@@ -707,7 +783,8 @@ div.disabled, div.disabled button{
 
 .reservationData .panel-group .cardImages img.selected{
   filter: grayscale(0%);
-  border: 1px solid blue;
+  border: 1px solid #8AC5D3;
+  border-radius: 4px;
 }
 
 .reservationData .panel-default:last-child .cardImages img{
@@ -717,6 +794,7 @@ div.disabled, div.disabled button{
 
 .reservationData .panel-default:last-child .panel-body p:first-child{
   padding-bottom: 10px;
+
 }
 
 .reservationData .panel-default:last-child .panel-body span{
@@ -725,6 +803,7 @@ div.disabled, div.disabled button{
 }
 
 .reservationData .panel-default:last-child .panel-body span:first-child{
+  top:0;
   left: 30px;
 }
 .reservationData .panel-default:last-child .panel-body span:last-child{
@@ -750,7 +829,14 @@ div.disabled, div.disabled button{
   color:#97A0A4;
 }
 
-.reservationData footer a{
-  display: inline-block;
- padding-top: 10px;
+.reservationData .buttonsForm {
+  padding-top: 20px;
 }
+
+.reservationData .buttonsForm a{
+  font-size: 14px;
+  padding-top: 10px;
+  display: inline-block;  
+}
+
+
